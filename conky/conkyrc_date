@@ -1,0 +1,68 @@
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+background                  yes         #
+
+alignment                   top_left   #
+gap_x                       640          #
+gap_y                       0          #
+
+minimum_size                400 10       #
+
+own_window                  true        #
+own_window_type             override    #
+own_window_colour           black       #
+own_window_transparent      true        #
+
+draw_borders                false       #
+
+font                        Droid Serif:size=40
+use_xft                     true        #
+
+draw_shades false
+
+double_buffer               true        #
+total_run_times             0           # run forever
+update_interval             10         #
+
+format_human_readable       true        #
+short_units                 false       #
+temperature_unit            celsius     #
+
+use_spacer                  left        #
+
+default_color               555555      # text
+color0 25b2e7   # focus
+color1 444444   # h2
+color2 cc6a07   # h1
+
+
+TEXT
+
+
+ ${time %A}${voffset -30}
+${hr 3}${voffset -20}
+$alignr${time %B %d, %Y}    
+${voffset -180}${offset 300}${font Droid Serif:size=80}${time %_H.%M}${font}
